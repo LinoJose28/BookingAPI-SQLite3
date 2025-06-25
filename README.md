@@ -12,6 +12,12 @@ Simple Fitness Class booking API using FastAPI & SQLite3
 6. Error handling and validation
 
 
+# Technologies Used
+1. Python 3.10.11
+2. FastAPI
+3. SQLite3
+4. pytz (Timezone management)
+
 # Instructions
 1. Download the project
 2. Create a virtual Environment
@@ -20,7 +26,10 @@ Simple Fitness Class booking API using FastAPI & SQLite3
 3. Activate the virtual environment (.venv):
     .\.venv\Scripts\activate
 
-4. Start the server:
+4. Install dependencies:
+  pip install -r requirements.txt
+
+5. Start the server:
     uvicorn main:app --reload
 
 
@@ -52,4 +61,14 @@ Method: GET
 # Swagger 
 
 http://127.0.0.1:8000/docs
+
+
+
+## 🎥 Demo / Walkthrough Video
+
+Watch the full project walkthrough on Loom:  
+👉 [Click here to watch](https://www.loom.com/share/6e3620d227ec4672bc41a027751734b3?sid=c06a7993-fcd2-4f35-bb52-5b3911e590ec)
+
+
+
 
