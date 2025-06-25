@@ -13,11 +13,16 @@ Simple Fitness Class booking API using FastAPI & SQLite3
 
 
 # Instructions
-1. Unzip the project
-2. Activate the virtual environment (.venv):
+1. Download the project
+2. Create a virtual Environment
+  python -m venv .venv
+
+3. Activate the virtual environment (.venv):
     .\.venv\Scripts\activate
-3. Start the server:
+
+4. Start the server:
     uvicorn main:app --reload
+
 
 # Postman
 1. Show all classes:
@@ -44,4 +49,7 @@ http://127.0.0.1:8000/bookings?email=jack@gmail.com
 Method: GET
 
 
+# Swagger 
+
+http://127.0.0.1:8000/docs
 
