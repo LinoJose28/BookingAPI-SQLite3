@@ -35,26 +35,38 @@ Simple Fitness Class booking API using FastAPI & SQLite3
 
 # Postman
 1. Show all classes:
+   
 http://127.0.0.1:8000/classes
+
 Method: GET
 
 2. Timezone conversion:
+
 http://127.0.0.1:8000/classes?tz=Europe/London
+
 Method: GET
 
 3. Book a class:
+   
 http://127.0.0.1:8000/book
+
 Method: POST
+
 Headers: Content-Type - application/json
+
 Body (JSON): 
+
 {
   "class_id": 3,
   "client_name": "Jack",
   "client_email": "jack@gmail.com"
 }
 
+
 4. Show bookings with client email
+   
 http://127.0.0.1:8000/bookings?email=jack@gmail.com
+
 Method: GET
 
 
