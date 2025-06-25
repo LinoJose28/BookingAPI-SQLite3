@@ -78,7 +78,8 @@ def book_class(request: BookingRequest):
             class_id=request.class_id,
             client_name=request.client_name,
             client_email=request.client_email
-    )}
+            ).dict(exclude_none=True)
+        }
 
 
 @app.get('/bookings', response_model=List[BookingResponse])
@@ -128,6 +129,17 @@ def reset_classes(class_name: str = Body(..., embed=True), slots: int = Body(5, 
     conn.close()
 
     return {"message":f"Class '{class_name}' reset with {slots} slots."}
+
+
+@app.delete('/bookings/delete')
+def clear_bookings():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM bookings")
+    conn.commit()
+    conn.close()
+    
+    return {"message":"Cleared all bookings."}
 
 
 @app.get('/')
